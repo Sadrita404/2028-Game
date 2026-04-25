@@ -3,26 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2024 Game - Colorful Edition</title>
+    <title>2024 Game</title>
     <style>
-        /* Modern, vibrant background */
         body {
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(135deg, #3b8183 0%, #fad089 100%);
+            background-color: #faf8ef;
             font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-            overflow: hidden;
         }
 
         .container {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 10px 10px 0px #333; /* Bold retro shadow */
-            border: 4px solid #333;
             text-align: center;
         }
 
@@ -30,91 +23,67 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 300px;
-            margin-bottom: 20px;
+            width: 280px;
+            margin-bottom: 10px;
         }
 
-        h1 { 
-            margin: 0; 
-            font-size: 48px; 
-            color: #333; 
-            text-transform: uppercase;
-            letter-spacing: -2px;
-        }
+        h1 { margin: 0; font-size: 40px; color: #776e65; }
 
         .score-box {
-            background: #333;
-            padding: 10px 20px;
-            color: #fad089;
-            border-radius: 8px;
+            background: #bbada0;
+            padding: 5px 15px;
+            color: white;
+            border-radius: 3px;
             font-weight: bold;
-            border: 2px solid #333;
         }
 
         .game-board {
-            width: 300px;
-            height: 300px;
-            background: #333; /* Darker board for better contrast */
+            width: 280px;
+            height: 280px;
+            background: #bbada0;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            padding: 12px;
-            border-radius: 10px;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 6px;
         }
 
         .tile {
-            width: 65px;
-            height: 65px;
-            background: #444;
+            width: 60px;
+            height: 60px;
+            background: rgba(238, 228, 218, 0.35);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.6rem;
-            font-weight: 800;
-            border-radius: 6px;
-            transition: all 0.1s ease-in-out;
-            animation: appear 0.2s;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 3px;
+            color: #776e65;
         }
 
-        @keyframes appear {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* Distinct, vibrant Tile Styles */
-        .tile-2 { background: #eee4da; color: #776e65; }
-        .tile-4 { background: #ede0c8; color: #776e65; }
-        .tile-8 { background: #f2b179; color: white; border: 2px solid #d68a4a; }
-        .tile-16 { background: #f59563; color: white; }
-        .tile-32 { background: #f67c5f; color: white; }
-        .tile-64 { background: #f65e3b; color: white; }
-        .tile-128 { background: #edcf72; color: white; font-size: 1.3rem; box-shadow: 0 0 10px #edcf72; }
-        .tile-256 { background: #edcc61; color: white; font-size: 1.3rem; box-shadow: 0 0 15px #edcc61; }
-        .tile-512 { background: #edc850; color: white; font-size: 1.3rem; }
-        .tile-1024 { background: #edc53f; color: white; font-size: 1.1rem; }
-        .tile-2048 { background: #3b8183; color: #fad089; font-size: 1.1rem; border: 3px solid #fad089; }
+        /* Tile Styles */
+        .tile-2 { background: #eee4da; }
+        .tile-4 { background: #ede0c8; }
+        .tile-8 { background: #f2b179; color: #f9f6f2; }
+        .tile-16 { background: #f59563; color: #f9f6f2; }
+        .tile-32 { background: #f67c5f; color: #f9f6f2; }
+        .tile-64 { background: #f65e3b; color: #f9f6f2; }
+        .tile-128 { background: #edcf72; color: #f9f6f2; font-size: 1.2rem; }
+        .tile-256 { background: #edcc61; color: #f9f6f2; font-size: 1.2rem; }
+        .tile-512 { background: #edc850; color: #f9f6f2; font-size: 1.2rem; }
+        .tile-1024 { background: #edc53f; color: #f9f6f2; font-size: 1rem; }
+        .tile-2048 { background: #edc22e; color: #f9f6f2; font-size: 1rem; }
 
         button {
-            margin-top: 25px;
-            padding: 12px 25px;
-            border: 3px solid #333;
-            background: #fad089;
-            color: #333;
-            border-radius: 8px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #8f7a66;
+            color: white;
+            border-radius: 3px;
             cursor: pointer;
-            font-weight: 900;
-            font-size: 18px;
-            box-shadow: 4px 4px 0px #333;
-            transition: 0.1s;
-        }
-
-        button:hover {
-            background: #f8c364;
-        }
-
-        button:active {
-            box-shadow: 0px 0px 0px #333;
-            transform: translate(4px, 4px);
+            font-weight: bold;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -123,15 +92,12 @@
     <div class="container">
         <div class="header">
             <h1>2048</h1>
-            <div class="score-box">
-                <small style="display:block; font-size: 10px; text-transform: uppercase;">Score</small>
-                <span id="score">0</span>
-            </div>
+            <div class="score-box">Score: <span id="score">0</span></div>
         </div>
 
         <div class="game-board" id="board"></div>
 
-        <button onclick="resetGame()">RESET GAME</button>
+        <button onclick="resetGame()">New Game</button>
     </div>
 
     <script>
@@ -206,13 +172,13 @@
         }
 
         function checkStatus() {
-            if (board.includes(2048)) alert("You Win! The Ultimate 2048!");
+            if (board.includes(2048)) alert("You Win!");
             else if (!board.includes(0)) {
                 let movePossible = false;
                 for (let i = 0; i < 16; i++) {
                     if ((i % 4 < 3 && board[i] === board[i+1]) || (i < 12 && board[i] === board[i+4])) movePossible = true;
                 }
-                if (!movePossible) alert("Game Over! Try again.");
+                if (!movePossible) alert("Game Over");
             }
         }
 
