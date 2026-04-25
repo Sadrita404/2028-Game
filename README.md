@@ -1,5 +1,4 @@
-| 2048 Game| 
-|:--|
+# 2048 Game
 
 
 |Title |  2048 Game|
