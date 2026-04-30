@@ -40,10 +40,6 @@
 
 ---
 
-Ai Use - I have use to know how to integrate the matrix layout in HTML
-
----
-
 ## To run it locally 
 * 1) Fork the repo 
 * 2) Open the file in your code editor (VS Code )
