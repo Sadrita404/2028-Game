@@ -12,6 +12,15 @@
 
 #### 2048 is a single-player sliding tile puzzle game where players swipe to move numbered tiles on a grid, merging identical numbers to create a tile with the value 2048.
 
+---
+### Inspiration: 
+The main inspiration of this project was when I  started thinking about to develop some game using the tech stack that I have recently learnt and then I remember that 2048 was a game that I played the most during lockdown and I wanted to build one for myself, so I build one.
+
+### Why I built it:
+I wanted to build one game which is web based, so I build this 2048 game since it's the first game that I developed, and it doesn't require much complexity to make the project and I also love this game and I wanted to build one for myself so that I can show to someone that I have made this game by myself and they can play as well, so that's why I built it...
+
+---
+
 ## Tech Used
   |Tech Stack|
   |:--|
