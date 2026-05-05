@@ -1,3 +1,6 @@
+<img width="1100" height="155" alt="Screenshot 2026-05-06 at 12 23 25 AM" src="https://github.com/user-attachments/assets/f69abd73-d3e0-4aba-857b-70726f5714d5" />
+
+
 # 2048 Game
 
 
